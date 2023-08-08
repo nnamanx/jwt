@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: jwt project
+  profiles:
+    include:
+      - db
+      - email
+      - security
