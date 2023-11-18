@@ -41,6 +41,12 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 }
 
+bootJar {
+    archiveFileName = "jwt-service-0.0.1-SNAPSHOT.jar"
+    mainClass = 'com.company.jwt'
+}
+
+
 tasks.named('test') {
     useJUnitPlatform()
 }
