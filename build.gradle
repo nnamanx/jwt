@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.14'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-    id 'com.palantir.docker' version '0.35.0'
+//    id 'com.palantir.docker' version '0.35.0'
 }
 
 group = 'com.example'
@@ -22,12 +22,12 @@ repositories {
     mavenCentral()
 }
 
-docker {
-    name "jwt"
-    dockerfile file('jwt/DockerFile')
-    copySpec.from(jar).rename(".*","jwt.jar")
-    buildArgs(['JAR_FILE': "jwt.jar"])
-}
+//docker {
+//    name "jwt"
+//    dockerfile file('jwt/DockerFile')
+//    copySpec.from(jar).rename(".*","jwt.jar")
+//    buildArgs(['JAR_FILE': "jwt.jar"])
+//}
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-mail'
@@ -49,10 +49,10 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 }
 
-bootJar {
-    archiveFileName = "jwt-service-0.0.1-SNAPSHOT.jar"
-    mainClass = 'com.company.jwt'
-}
+//bootJar {
+//    archiveFileName = "jwt-service-0.0.1-SNAPSHOT.jar"
+//    mainClass = 'com.company.jwt'
+//}
 
 
 tasks.named('test') {
